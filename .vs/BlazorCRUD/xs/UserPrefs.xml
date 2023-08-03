@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{19F0097D-AA5B-4F64-B5B3-7C8D2AE4F100}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlazorCRUD/Data/BookService.cs">
+    <Files>
+      <File FileName="BlazorCRUD/Data/IBookService.cs" Line="1" Column="1" />
+      <File FileName="BlazorCRUD/Data/BookService.cs" Line="32" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BlazorCRUD" expanded="True">
+            <Node name="NuGet.Config files" expanded="True" />
+            <Node name="BlazorCRUD" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Data" expanded="True">
+                <Node name="BookService.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BlazorCRUD PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

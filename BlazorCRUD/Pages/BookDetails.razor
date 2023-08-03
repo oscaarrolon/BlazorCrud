@@ -1,0 +1,48 @@
+﻿@page "/bookDetails"
+<h1>Book Details</h1>
+
+
+<EditForm Model="@book">
+
+    <table class="table">
+
+        <tr>
+            <td>Title: @book.Title</td>
+            <td>
+                <input class="form-control col-sm-4" type="text"
+                       @bind="book.Title" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Title: @book.Author</td>
+            <td>
+                <input class="form-control col-sm-4" type="text"
+                       @bind="book.Author" />
+            </td>
+        </tr>
+
+        <tr>
+
+            <td colspan="2" style="text-align:center"  >
+
+                <input type="submit" value="Save" style="color: white; background-color: green"/>
+                <input type="button" value="Cancel" style="color: white; background-color:tomato"/>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+</EditForm>
+
+
+@code {
+    private Book book = new Book();
+
+
+
+}
+

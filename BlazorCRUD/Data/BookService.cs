@@ -50,6 +50,7 @@ namespace BlazorCRUD.Data
             }
             else return await InsertBook(book);
 
+
         }
 
         public async Task<bool> UpdateBook(Book book)

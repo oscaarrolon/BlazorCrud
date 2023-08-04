@@ -1,4 +1,8 @@
 ﻿@page "/bookDetails"
+@page "/bookDetails/{id:int}"
+@inject IBookService BookService
+@inject NavigationManager NavigationManager
+
 <h1>Book Details</h1>
 
 
@@ -24,10 +28,10 @@
 
         <tr>
 
-            <td colspan="2" style="text-align:center"  >
+            <td colspan="2" style="text-align:center">
 
-                <input type="submit" value="Save" style="color: white; background-color: green"/>
-                <input type="button" value="Cancel" style="color: white; background-color:tomato"/>
+                <input type="submit" value="Save" style="color: white; background-color: green" @onclick="async () => await SaveBook()"/>
+                <input type="button" value="Cancel" style="color: white; background-color:tomato" @onclick="Cancel"/>
 
             </td>
 
@@ -40,9 +44,34 @@
 
 
 @code {
+    [Parameter]
+    public int id { get; set; }
+
+
     private Book book = new Book();
 
 
+        protected override async Task OnInitializedAsync()
+        {
+        if(id != 0)
+    {
+            book = await BookService.GetBookDetails(id);
+    }
+        }
 
+
+        protected async Task SaveBook()
+    {
+
+        await BookService.SaveBook(book);
+        NavigationManager.NavigateTo("/bookList");
+
+    }
+
+
+    protected void Cancel()
+    {
+        NavigationManager.NavigateTo("/bookDetails");
+    }
 }
 

@@ -1,0 +1,75 @@
+﻿@page "/bookList"
+@inject IBookService BookService
+@inject NavigationManager NavigationManager
+
+<h1>Book List</h1>
+<h3>This page shows a list of books</h3>
+@Message
+
+<div>
+    <a href="/bookDetails" style="text-decoration: none; background-color: blueviolet; color:white"><i>Add New Book</i></a>
+</div>
+
+@if (books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in books)
+            {
+                <tr>
+                    <td>
+                        @book.Title
+                    </td>
+                    <td>
+                        @book.Author
+                    </td>
+                    <td>
+                        <button><a href="/bookDetails/@book.Id"><i>Edit</i></a></button>
+                    </td>
+                    <td>
+                        <button style="text-decoration:none; background-color: tomato; color: white" @onclick="async () => await DeleteBook(book.Id)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+             }
+        </tbody>
+    </table>
+
+
+@code {
+    public IEnumerable<Book> books { get; set; }
+    public string Message { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            books = await BookService.GetBooks();
+        }
+        catch (Exception e)
+        {
+            Message = e.Message;
+        }
+    }
+
+    protected async Task DeleteBook(int id)
+    {
+        await BookService.DeleteBook(id);
+        NavigationManager.NavigateTo("/bookList");
+    }
+
+
+}
+}

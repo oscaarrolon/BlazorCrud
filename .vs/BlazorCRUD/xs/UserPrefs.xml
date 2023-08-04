@@ -1,23 +1,22 @@
 ﻿<Properties StartupConfiguration="{19F0097D-AA5B-4F64-B5B3-7C8D2AE4F100}|https">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlazorCRUD/Data/BookService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlazorCRUD/Pages/BookDetails.razor">
     <Files>
-      <File FileName="BlazorCRUD/Data/IBookService.cs" Line="1" Column="1" />
-      <File FileName="BlazorCRUD/Data/BookService.cs" Line="32" Column="10" />
+      <File FileName="BlazorCRUD/Data/IBookService.cs" Line="13" Column="34" />
+      <File FileName="BlazorCRUD/Pages/BookDetails.razor" Line="31" Column="118" />
+      <File FileName="BlazorCRUD/Data/BookService.cs" Line="51" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BlazorCRUD" expanded="True">
             <Node name="NuGet.Config files" expanded="True" />
-            <Node name="BlazorCRUD" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
-              <Node name="Data" expanded="True">
-                <Node name="BookService.cs" selected="True" />
-              </Node>
+            <Node name="BlazorCRUD">
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="BookDetails.razor" selected="True" />
+              </Node>
               <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
